@@ -65,3 +65,9 @@ project-root/
 1. In `login_page.py`, update the `BASE_URL` to match your local or test environment.
 2. Create a test user in the application.
 3. In `test_login.py`, set the `VALID_USERNAME` and `VALID_PASSWORD` variables with the credentials of the test user.
+
+To run the tests, enter this command:
+
+```
+PYTHONPATH=. pytest tests/test_login.py
+```
