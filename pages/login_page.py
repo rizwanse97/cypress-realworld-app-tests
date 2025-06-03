@@ -22,17 +22,15 @@ class LoginPage:
     def load(self):
         self.driver.get(BASE_URL)
 
-    def set_username(self, value: str | None):
+    def set_username(self, value: str):
         element = self.driver.find_element(*self.username_loc)
         element.clear()
-        if value is not None:
-            element.send_keys(value)
+        element.send_keys(value)
 
-    def set_password(self, value: str | None):
+    def set_password(self, value: str):
         element = self.driver.find_element(*self.password_loc)
         element.clear()
-        if value is not None:
-            element.send_keys(value)
+        element.send_keys(value)
 
     def click_signin(self):
         self.driver.find_element(*self.signin_btn_loc).click()

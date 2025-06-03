@@ -10,9 +10,7 @@ VALID_PASSWORD  = "test1234"
 
 @pytest.fixture(scope="function")
 def driver():
-    opts = Options()
-    service = Service()
-    drv = webdriver.Chrome(service=service, options=opts)
+    drv = webdriver.Chrome()
     yield drv
     drv.quit()
 
